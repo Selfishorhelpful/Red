@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "842295971084",
+    "project_id": "redmance-97802",
+    "storage_bucket": "redmance-97802.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842295971084:android:9c3d91ad9928b893c50d29",
+        "android_client_info": {
+          "package_name": "com.example.redmance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZajPm-EZ_fOuQu0_AIWKBKdZQa-933YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842295971084:android:f4ec2dbb7d4571fac50d29",
+        "android_client_info": {
+          "package_name": "io.flutter.plugins.firebase.auth.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZajPm-EZ_fOuQu0_AIWKBKdZQa-933YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
