@@ -2,12 +2,25 @@ import 'package:flutter/material.dart';
 
 import '../../utils/helpers/app-color.dart';
 
-
 class CustomTextFieldPrimary extends StatelessWidget {
   final String labelText;
   final String hintText;
+  final TextEditingController controller;
+  final String? Function(String?)? validator;
+  final bool obscureText;
+  final bool isPasswordVisible;
+  final VoidCallback? togglePasswordVisibility;
 
-  const CustomTextFieldPrimary({super.key, required this.labelText, required this.hintText});
+  const CustomTextFieldPrimary({
+    super.key,
+    required this.labelText,
+    required this.hintText,
+    required this.controller,
+    this.validator,
+    this.obscureText = false,
+    this.isPasswordVisible = false,
+    this.togglePasswordVisibility,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +29,18 @@ class CustomTextFieldPrimary extends StatelessWidget {
       children: [
         Align(
           alignment: Alignment.bottomLeft,
-          child: Text(labelText,
-              style: const TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.normal,
-                  color: AppColors.text)),
+          child: Text(
+            labelText,
+            style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.normal,
+                color: AppColors.text),
+          ),
         ),
-        TextField(
+        TextFormField(
+          controller: controller,
+          validator: validator,
+          obscureText: obscureText && !isPasswordVisible,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: const TextStyle(
@@ -35,9 +53,24 @@ class CustomTextFieldPrimary extends StatelessWidget {
             focusedBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: AppColors.theme),
             ),
+            suffixIcon: obscureText
+                ? IconButton(
+                    icon: Icon(
+                      isPasswordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: AppColors.text,
+                    ),
+                    onPressed: togglePasswordVisibility,
+                  )
+                : null,
+          ),
+          style: const TextStyle(
+            color: Colors.white,
           ),
         ),
       ],
     );
   }
 }
+
