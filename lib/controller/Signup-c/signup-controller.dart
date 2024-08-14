@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
-  final formKeylogin = GlobalKey<FormState>();
+class SignupController extends GetxController {
+  final formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController fullNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   // Use RxBool for reactivity
@@ -16,6 +17,16 @@ class LoginController extends GetxController {
     if (!RegExp(r'^[^@]+@[^@]+.[^@]+').hasMatch(value)) {
       return 'Please enter a valid email';
     }
+    return null;
+  }
+
+  String? nameValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your full name';
+    }
+    if (!RegExp(r'^[a-zA-Z\s]+$').hasMatch(value)) {
+    return 'Please enter a valid name';
+  }
     return null;
   }
 
@@ -33,6 +44,4 @@ class LoginController extends GetxController {
   void togglePasswordVisibility() {
     isPasswordVisible.value = !isPasswordVisible.value;
   }
-
-
 }

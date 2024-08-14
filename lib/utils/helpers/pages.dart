@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:redmance/screens/signup-screen.dart';
 import 'package:redmance/utils/helpers/splash-screen.dart';
-
+import '../../controller/Signup-c/signup-controller.dart';
 import '../../controller/login-C/login-controller.dart';
 import '../../controller/splash-C/splashScreen-controller.dart';
 import '../../screens/login-screen.dart';
@@ -19,24 +19,24 @@ class AppPages {
 
     GetPage(
       name: LoginScreen.routeName,
-      page: () => const LoginScreen(),
-      // binding: BindingsBuilder(() {
-      //   Get.lazyPut<LoginController>(() => LoginController());
-      // }),
+      page: () =>  LoginScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<LoginController>(() => LoginController());
+      }),
     ),
     GetPage(
       name: SignInScreen.routeName,
-      page: () => const SignInScreen(),
-      // binding: BindingsBuilder(() {
-      //   Get.lazyPut<LoginController>(() => LoginController());
-      // }),
-    ),
-    /*GetPage(
-      name: '/profile',
-      page: () => ProfileView(),
+      page: () => SignInScreen(),
       binding: BindingsBuilder(() {
-        Get.lazyPut<ProfileController>(() => ProfileController());
+        Get.lazyPut<SignupController>(() => SignupController());
       }),
-    ),*/
+    ),
+    // GetPage(
+    //   name: '/profile',
+    //   page: () => ProfileView(),
+    //   binding: BindingsBuilder(() {
+    //     Get.lazyPut<ProfileController>(() => ProfileController());
+    //   }),
+    // ),
   ];
 }

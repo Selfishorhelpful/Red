@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Quicksand'),
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home:  LoginScreen(),
       initialRoute: SplashScreen.routeName,
       getPages: AppPages.pages,
     );
