@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart'; // Import Get package for navigation
+import 'dart:async'; // For Timer
 
+import '../../repository/wrapper.dart';
 import '../../screens/login-screen.dart';
 import '../constants/image-path.dart';
-
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'dart:async'; // For Timer
 
 class SplashScreen extends StatefulWidget {
   static const String routeName = "/splashscreen";
@@ -20,9 +19,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Start a timer to transition to LoginScreen after a delay
-    Timer(Duration(seconds: 3), () {
-      Get.offNamed(LoginScreen.routeName); // Navigate to LoginScreen
+    // Start a timer to transition to Wrapper after a delay
+    Timer(const Duration(seconds: 3), () {
+      // Navigate to Wrapper using Get package
+      Get.offAll(() => Wrapper());
     });
   }
 
@@ -40,4 +40,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-

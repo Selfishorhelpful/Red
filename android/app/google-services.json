@@ -12,7 +12,20 @@
           "package_name": "com.example.redmance"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "842295971084-m6m6onvv1hqfifs55c46fdb7av59dqpt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.redmance",
+            "certificate_hash": "1b76f19b9cb0971731c488d4e3b5d688f26640e8"
+          }
+        },
+        {
+          "client_id": "842295971084-l1bq07frcfm08riqbem2li2kd44goups.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDZajPm-EZ_fOuQu0_AIWKBKdZQa-933YM"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842295971084-4our4le742uqn3o367lkaqntejuei98k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "842295971084-uq0advv307ibuofuaasoqlgls9sg12mm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.redmance"
+              }
+            }
+          ]
         }
       }
     },
@@ -31,7 +56,12 @@
           "package_name": "io.flutter.plugins.firebase.auth.example"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "842295971084-l1bq07frcfm08riqbem2li2kd44goups.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDZajPm-EZ_fOuQu0_AIWKBKdZQa-933YM"
@@ -39,7 +69,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842295971084-4our4le742uqn3o367lkaqntejuei98k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "842295971084-uq0advv307ibuofuaasoqlgls9sg12mm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.redmance"
+              }
+            }
+          ]
         }
       }
     }
